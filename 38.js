@@ -22,3 +22,14 @@
 // Write a function add that takes a string with a summation task and returns its result as a number. Two natural numbers should be added. The summation task is a string of the form '102+17'.
 
 // Example: add('102+17') should return 119.
+
+function add(str){
+  let firstNo  = parseInt(str,10);
+  let plus = str.indexOf("+");
+  let afterPlus = str.substr(plus+1);
+  let secondNo = parseInt(afterPlus,10);
+  return firstNo + secondNo;
+  }
+  let result = add("112+234");
+  console.log(result);
+  
